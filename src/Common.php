@@ -11,17 +11,18 @@
  * @author      Alexander Schmautz <ceo@elixant.ca>
  * @filesource
  */
+
 use OneSaas\Components\Container\Container;
 
-if (! function_exists('get_container'))
+if (!function_exists('get_container'))
 {
-    /**
-     * Retrieve the current Container Instance.
-     *
-     * @return Container
-     */
-    function get_container()
-    {
-        return Container::getInstance() ?: new Container;
-    }
+	/**
+	 * Retrieve the current Container Instance.
+	 *
+	 * @return Container
+	 */
+	function get_container()
+	{
+		return Container::getInstance() ?: new Container;
+	}
 }

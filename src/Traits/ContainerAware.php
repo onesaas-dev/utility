@@ -11,19 +11,13 @@
  * @author      Alexander Schmautz <ceo@elixant.ca>
  * @filesource
  */
-
-use Symfony\Component\VarDumper\VarDumper;
-
-trait Dumpable
+trait ContainerAware
 {
 	/**
-	 * Dump the Class contents for visual inspection, this should
-	 * really only be used for debugging purposes.
-	 *
-	 * @return mixed
+	 * @return \OneSaas\Components\Container\Container
 	 */
-	public function dump()
+	public function container()
 	{
-		return VarDumper::dump($this);
+		return get_container();
 	}
 }
